@@ -1,0 +1,41 @@
+﻿<Window x:Class="IpSetter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IpSetter"
+        mc:Ignorable="d"
+        Title="IP setter" Height="321.938" Width="616.585" Closing="Window_Closing">
+    <Grid>
+        <!-- Buttons -->
+        <Button Name="btnAddNewItem" Content="Add" HorizontalAlignment="Left" Margin="208,14,0,0" VerticalAlignment="Top" Width="71" Click="btnAddNewItem_Click" Height="27" FontSize="16"/>
+        <Button x:Name="btnRemove" Content="Delete" HorizontalAlignment="Left" Margin="208,46,0,0" VerticalAlignment="Top" Width="71" Click="btnRemove_Click" Height="30" FontSize="16" RenderTransformOrigin="0.31,0.533"/>
+        <Button x:Name="btnSetIp" HorizontalAlignment="Left" Margin="526,14,0,0" VerticalAlignment="Top" Width="64" Click="btnSetIp_Click" Height="55" FontSize="20" Content="SET"/>
+        <Button x:Name="btnDhcp" HorizontalAlignment="Left" Margin="526,73,0,0" VerticalAlignment="Top" Width="64" Click="btnDhcp_Click" Height="55" FontSize="20" Content="DHCP"/>
+        
+        <!-- TextBoxes-->
+        <TextBox Name="tbIp1" Text="192" HorizontalAlignment="Left" Height="23" Margin="68,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbIp1_GotKeyboardFocus" GotMouseCapture="tbIp1_GotMouseCapture" TextChanged="tbIp1_TextChanged" />
+        <TextBox Name="tbIp2" Text="168" HorizontalAlignment="Left" Height="23" Margin="103,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbIp2_GotKeyboardFocus" GotMouseCapture="tbIp2_GotMouseCapture" TextChanged="tbIp2_TextChanged"/>
+        <TextBox Name="tbIp3" Text="0" HorizontalAlignment="Left" Height="23" Margin="138,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbIp3_GotKeyboardFocus" GotMouseCapture="tbIp3_GotMouseCapture" TextChanged="tbIp3_TextChanged"/>
+        <TextBox Name="tbIp4" Text="1" HorizontalAlignment="Left" Height="23" Margin="173,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbIp4_GotKeyboardFocus" GotMouseCapture="tbIp4_GotMouseCapture" TextChanged="tbIp4_TextChanged"/>
+
+        <TextBox x:Name="tbSb1" Text="255" HorizontalAlignment="Left" Height="23" Margin="68,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbSb1_GotKeyboardFocus" GotMouseCapture="tbSb1_GotMouseCapture" TextChanged="tbSb1_TextChanged"/>
+        <TextBox x:Name="tbSb2" Text="255" HorizontalAlignment="Left" Height="23" Margin="103,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbSb2_GotKeyboardFocus" GotMouseCapture="tbSb2_GotMouseCapture" TextChanged="tbSb2_TextChanged"/>
+        <TextBox x:Name="tbSb3" Text="255" HorizontalAlignment="Left" Height="23" Margin="138,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbSb3_GotKeyboardFocus" GotMouseCapture="tbSb3_GotMouseCapture" TextChanged="tbSb3_TextChanged"/>
+        <TextBox x:Name="tbSb4" Text="0" HorizontalAlignment="Left" Height="23" Margin="173,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" BorderBrush="Black" BorderThickness="1" GotKeyboardFocus="tbSb4_GotKeyboardFocus" GotMouseCapture="tbSb4_GotMouseCapture" TextChanged="tbSb4_TextChanged"/>
+
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="68,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" BorderBrush="Black" BorderThickness="1"/>
+        
+        <!-- Other elements -->
+        <ComboBox Name="cbInterfaces" HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top" Width="190" Height="27"/>
+
+        <Label Content="IP:" HorizontalAlignment="Left" Margin="45,46,0,0" VerticalAlignment="Top"/>
+        <Label Content="Subnet:" HorizontalAlignment="Left" Margin="18,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="24,102,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+        <Label Content="CURRENT" HorizontalAlignment="Center" Margin="0,146,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <ListBox Name="lbConfigs" HorizontalAlignment="Left" Height="114" Margin="296,14,0,0" VerticalAlignment="Top" Width="225"/>
+        <ListBox Name="lbCurrentIps" Height="100"  Width="300" Margin="10,172,0,10" HorizontalAlignment="Center" VerticalAlignment="Top"></ListBox>
+
+    </Grid>
+</Window>
